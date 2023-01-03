@@ -5,3 +5,4 @@ def common_elements(set_1, set_2):
         if item in set_2:
             my_list.append(item)
     return my_list
+# return(set_1 & set_2)
