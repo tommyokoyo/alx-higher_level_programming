@@ -2,9 +2,10 @@
 """
     square class defination
 """
+
+
 class Square:
     """
     Empty class
-    
     """
     pass
