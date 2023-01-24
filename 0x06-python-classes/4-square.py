@@ -23,7 +23,7 @@ class Square:
 
     def area(self):
         return (self.__size)**2
-    
+
     @property
     def size(self):
         """size: size of the square
@@ -33,7 +33,7 @@ class Square:
              TypeError and ValueError
         """
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """size: size of the square
