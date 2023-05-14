@@ -1,9 +1,10 @@
 #!/usr/bin/node
 
 // Parses for the second biggest interger in a list
-if (process.argv.length <= 3) {
+const args = process.argv.slice(2);
+if (args.length <= 1) {
   console.log('0');
 } else {
-  const argList = process.argv.sort();
-  console.log(argList.reverse()[1]);
+  const argssorted = args.sort(function (a, b) { return a - b; });
+  console.log(argssorted[argssorted.length - 2]);
 }
