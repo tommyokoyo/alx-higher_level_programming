@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-class Reactangle:
+class Rectangle:
     """Defines a rectangle"""
     def __init__(self) -> None:
         pass
