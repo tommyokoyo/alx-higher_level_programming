@@ -54,5 +54,5 @@ class Square:
         if self.size == 0:
             print()
         else:
-            for hash in self.size:
+            for hash in range(self.size):
                 print("#" * self.size)
