@@ -14,8 +14,12 @@ class Square:
         Args:
             size: size of square
         """
-        
-        self.__size = size
+        if type(size) is not int:
+            raise TypeError("Size must be an interger")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
 
     def area(self):
         return (self.__size)**2
@@ -47,10 +51,8 @@ class Square:
             self.__size = value
 
     def my_print(self):
-        """
-            prints in stdout the square with the character #
-        """
-        print("\n".join(["".join(["#" for a in range(self.__size)]) for b in range(self.__size)]))
-
-my_square = Square(3)
-my_square.my_print()
+        if self.size == 0:
+            print()
+        else:
+            for hash in self.size:
+                print("#" * self.size)
