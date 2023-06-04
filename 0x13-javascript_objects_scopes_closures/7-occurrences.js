@@ -10,7 +10,7 @@
 exports.nbOccurences = function (list, searchElement) {
   let count = 0;
 
-  for (let n = 0; n < list.length; ++n) {
+  for (let n = 0; n < list.length; n++) {
     if (list[1] === searchElement) {
       ++count;
     }
