@@ -1,3 +1,5 @@
+-- noinspection SqlDialectInspectionForFile
+
 -- Creates second_table and adds multiple rows
 -- second_table description:
 --	id INT
