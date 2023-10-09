@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Module 3-rectangle
+Module 5-rectangle
 Contains class Rectangle with private attribute width and height,
-public area and perimeter methods, and allows printing #'s
+public area and perimeter methods, allows printing #'s, and deletes
 """
 
 
@@ -21,6 +21,8 @@ class Rectangle:
         area(self)
         perimeter(self)
         __str__(self)
+        __repr__(self)
+        __del__(self)
     """
     def __init__(self, width=0, height=0):
         """ Initialize rectangles """
@@ -71,3 +73,11 @@ class Rectangle:
             return ""
         pic = "\n".join(["#" * self.__width for rows in range(self.__height)])
         return pic
+
+    def __repr__(self):
+        """ String representation to recreate new instance """
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
+
+    def __del__(self):
+        """ Deletes instance of class """
+        print("Bye rectangle...")
