@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const request = require('request');
 
 if (process.argv.length < 3) {
@@ -16,7 +18,7 @@ request(apiUrl, (error, response, body) => {
       const films = JSON.parse(body).results;
       let numberOfMovies = 0;
 
-      for (let film of films) {
+      for (const film of films) {
         if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
           numberOfMovies++;
         }

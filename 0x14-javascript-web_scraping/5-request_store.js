@@ -1,4 +1,4 @@
-#! /usr/bin/node
+#!/usr/bin/node
 
 const request = require('request');
 const fs = require('fs');
@@ -20,11 +20,11 @@ request(url, (error, response, body) => {
         if (error) {
           console.error(error);
         } else {
-            console.log('File written successfully');
+          console.log('File written successfully');
         }
       });
     } else {
-        console.log(`Error fetching, Status: ${response.statusCode}`);
+      console.log(`Error fetching, Status: ${response.statusCode}`);
     }
   }
 });
